@@ -2,9 +2,10 @@ package com.example.belalkhan.androidviewmodel;
 
 import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
+import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
+import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
@@ -17,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
     List<User> userList;
 
+    DividerItemDecoration mDivider;  //分隔線
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +28,10 @@ public class MainActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.recyclerview);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+        //recyclerView分隔線
+        mDivider = new DividerItemDecoration(this,DividerItemDecoration.VERTICAL);
+        recyclerView.addItemDecoration(mDivider);
 
         UsersViewModel model = ViewModelProviders.of(this).get(UsersViewModel.class);
 
