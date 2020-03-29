@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
     List<User> userList;
 
-    DividerItemDecoration mDivider;  //分隔線
+    DividerItemDecoration mDivider;  //Divider
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
