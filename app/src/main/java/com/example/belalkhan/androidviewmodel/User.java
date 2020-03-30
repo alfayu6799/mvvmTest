@@ -1,5 +1,15 @@
 package com.example.belalkhan.androidviewmodel;
 
+/******************
+ *
+ * Account to https://api.github.com/
+ * create User class
+ * aratar_url
+ * login
+ * site_admin
+ *
+******************/
+
 public class User {
     private String avatar_url;
     private String login;
